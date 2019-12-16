@@ -1,9 +1,7 @@
 import os
-import numpy as np
 from psana import DataSource
 from dask.distributed import Client
-from dask.distributed import Variable, Queue
-import dask.array as da
+from dask.distributed import Queue
 
 client = Client(scheduler_file="scheduler.json")
 
