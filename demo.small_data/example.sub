@@ -1,0 +1,15 @@
+#!/bin/bash
+#SBATCH -N 1
+#SBATCH -n 3
+#SBATCH -c 1
+#SBATCH -C haswell
+#SBATCH -q debug
+#SBATCH -J smallD
+#SBATCH --account=m3384
+#SBATCH --mail-user=melkhatibr@lbl.gov
+#SBATCH --mail-type=ALL
+#SBATCH -t 00:30:00
+
+export PS_SRV_NODES=2
+
+srun -n 6 -o example.log python example.py 
